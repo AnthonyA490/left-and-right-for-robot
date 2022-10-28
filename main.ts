@@ -1,3 +1,16 @@
-basic.forever(function () {
-	
+input.onButtonPressed(Button.A, function () {
+    pins.servoSetPulse(AnalogPin.P13, 1700)
+    pins.servoSetPulse(AnalogPin.P8, 1700)
+    control.waitMicros(20000)
+    pins.servoSetPulse(AnalogPin.P8, 1300)
+    pins.servoSetPulse(AnalogPin.P13, 1300)
+    control.waitMicros(20000)
 })
+input.onButtonPressed(Button.B, function () {
+    pins.servoSetPulse(AnalogPin.P13, 1300)
+    pins.servoSetPulse(AnalogPin.P8, 1300)
+    control.waitMicros(20000)
+    pins.servoSetPulse(AnalogPin.P8, 1700)
+    pins.servoSetPulse(AnalogPin.P13, 1700)
+})
+basic.showIcon(IconNames.Angry)
